@@ -1,8 +1,11 @@
 const router = require('express').Router();
 
-//Require the correct files into the api folder
+const userRoutes = require('./user-routes');
+const postRoutes = require('./post-routes');
+const commentRoutes = require('./comment-routes');
 
-//Create the router.use functionality for each required file
-
+router.use('/users', userRoutes);
+router.use('/posts', postRoutes);
+router.use('/comments', commentRoutes);
 
 module.exports = router;
